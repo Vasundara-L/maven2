@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: ''
+                git branch: 'master', url: 'https://github.com/Vasundara-L/maven2.git'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
         stage('Run Application') {
             steps {
                 // Start the JAR application
-                sh 'java -jar target/MyMavenJenkinsPipeline-1.0-SNAPSHOT.jar'
+                sh 'java -jar target/maven1-1.0-SNAPSHOT.jar'
             }
         }
 
